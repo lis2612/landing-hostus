@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  max-width: 1234px;
+}
+
+.link {
+  opacity: 0.8;
+  color: #414141;
+  font-family: Poppins, Roboto, Tahoma, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  background: #de3c3c;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &:after {
+    position: relative;
+    top: 1px;
+    content: url("/images/arrow-right.svg");
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+  }
+}

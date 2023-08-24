@@ -1,0 +1,16 @@
+.header{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo{
+    width: 91px;
+    height: 34px;
+  }
+
+  &__menu{
+    display: flex;
+    gap:61px;
+  }
+}
