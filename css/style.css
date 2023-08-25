@@ -157,7 +157,7 @@ legend {
 
 .button {
   display: inline-block;
-  padding: 0 20px;
+  padding: 12px 20px;
   border-radius: 4px;
   background: #de3c3c;
   color: #fff;
@@ -244,10 +244,6 @@ legend {
 }
 .create__description {
   margin-bottom: 30px;
-}
-.create__button {
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .quality {
@@ -346,4 +342,39 @@ legend {
 .quality__card .card__title {
   margin-bottom: 13px;
   font-size: 18px;
+}
+
+.track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  height: 342px;
+  background: url("../images/bg.png");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 0;
+  padding-top: 98px;
+}
+.track__title {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.track__description {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+.track__button {
+  margin: 0 auto;
 }
