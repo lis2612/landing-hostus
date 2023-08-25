@@ -137,7 +137,7 @@ legend {
 }
 
 .description {
-  color: #C5C5C5;
+  color: #c5c5c5;
   font-family: Roboto, Poppins, Tahoma, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -160,7 +160,7 @@ legend {
   padding: 0 20px;
   border-radius: 4px;
   background: #de3c3c;
-  color: #FFF;
+  color: #fff;
   font-family: Poppins, Roboto, Tahoma, sans-serif;
   font-size: 13px;
   font-style: normal;
@@ -177,12 +177,17 @@ legend {
 }
 
 .description {
-  color: #C5C5C5;
+  color: #c5c5c5;
   font-family: Roboto, Poppins, Tahoma, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+}
+
+.card {
+  border-radius: 6px;
+  border: 2px solid rgba(197, 197, 197, 0.15);
 }
 
 .header {
@@ -228,7 +233,7 @@ legend {
           align-items: center;
   gap: 114px;
   width: 1047px;
-  margin: 146px auto 0;
+  margin: 146px auto 146px;
 }
 .create__image {
   width: 460px;
@@ -243,4 +248,62 @@ legend {
 .create__button {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.quality {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 130px;
+  margin-bottom: 308px;
+  padding: 0 60px;
+}
+.quality__card {
+  position: relative;
+  width: 480px;
+  height: 260px;
+  padding-top: 55px;
+  padding-left: 30px;
+}
+.quality__card_active {
+  background: #de3c3c;
+  border: none;
+}
+.quality__card_active .card__title {
+  color: #FFF;
+}
+.quality__card_active .card__description {
+  color: #FFF;
+}
+.quality__card_active:before {
+  content: url("/images/oval-left.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.quality__card_active::after {
+  content: url("/images/oval-right.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.quality__card_offset {
+  top: 130px;
+}
+.quality__card .card__image {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+  margin-bottom: 15px;
+}
+.quality__card .card__title {
+  margin-bottom: 13px;
+  font-size: 18px;
 }
