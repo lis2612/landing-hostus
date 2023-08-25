@@ -297,27 +297,27 @@ legend {
   right: 0;
   top: 0;
 }
-.quality__card:hover {
+.quality__card_active {
   background: #de3c3c;
   border: none;
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-.quality__card:hover .card__image {
+.quality__card_active .card__image {
   position: relative;
   z-index: 5;
 }
-.quality__card:hover .card__title {
+.quality__card_active .card__title {
   color: #fff;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.quality__card:hover .card__description {
+.quality__card_active .card__description {
   color: #fff;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.quality__card:hover:before {
+.quality__card_active:before {
   -webkit-filter: opacity(1);
           filter: opacity(1);
   -webkit-transition: -webkit-filter 0.7s ease-in;
@@ -325,7 +325,7 @@ legend {
   transition: filter 0.7s ease-in;
   transition: filter 0.7s ease-in, -webkit-filter 0.7s ease-in;
 }
-.quality__card:hover::after {
+.quality__card_active::after {
   -webkit-filter: opacity(1);
           filter: opacity(1);
   -webkit-transition: -webkit-filter 0.7s ease-in;
