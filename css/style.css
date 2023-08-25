@@ -12,6 +12,13 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.eot");
+  src: url("/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto-Regular.woff") format("woff"), url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 /* Reset styles  */
 * {
   padding: 0px;
@@ -120,6 +127,24 @@ legend {
   max-width: 1234px;
 }
 
+.title {
+  color: #212121;
+  font-family: Poppins, Roboto, Tahoma, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.description {
+  color: #C5C5C5;
+  font-family: Roboto, Poppins, Tahoma, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
 .link {
   opacity: 0.8;
   color: #414141;
@@ -131,11 +156,12 @@ legend {
 }
 
 .button {
-  padding: 8px 20px;
+  display: inline-block;
+  padding: 0 20px;
   border-radius: 4px;
   background: #de3c3c;
   color: #FFF;
-  font-family: Poppins;
+  font-family: Poppins, Roboto, Tahoma, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -148,6 +174,15 @@ legend {
   height: 10px;
   width: 10px;
   margin-left: 5px;
+}
+
+.description {
+  color: #C5C5C5;
+  font-family: Roboto, Poppins, Tahoma, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .header {
@@ -170,5 +205,42 @@ legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 36px;
   gap: 61px;
+}
+.header .button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 114px;
+  width: 1047px;
+  margin: 146px auto 0;
+}
+.create__image {
+  width: 460px;
+  height: 407px;
+}
+.create__title {
+  margin-bottom: 12px;
+}
+.create__description {
+  margin-bottom: 30px;
+}
+.create__button {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }

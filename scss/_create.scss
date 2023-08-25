@@ -1,0 +1,28 @@
+.create {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 114px;
+  width: 1047px;
+  margin: 146px auto 0;
+  // padding-right: 41px;
+  // padding: 146px 113px 0 73px;
+
+  &__image {
+    width: 460px;
+    height: 407px;
+  }
+
+  &__title{
+    margin-bottom: 12px;
+  }
+
+  &__description{
+    margin-bottom: 30px;
+  }
+
+  &__button{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
