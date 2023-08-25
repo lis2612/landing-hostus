@@ -170,7 +170,7 @@ legend {
 .button:after {
   position: relative;
   top: 1px;
-  content: url("/images/arrow-right.svg");
+  content: url("../images/arrow-right.svg");
   height: 10px;
   width: 10px;
   margin-left: 5px;
@@ -282,13 +282,13 @@ legend {
   color: #FFF;
 }
 .quality__card_active:before {
-  content: url("/images/oval-left.svg");
+  content: url("../images/oval-left.svg");
   position: absolute;
   left: 0;
   top: 0;
 }
 .quality__card_active::after {
-  content: url("/images/oval-right.svg");
+  content: url("../images/oval-right.svg");
   position: absolute;
   right: 0;
   top: 0;

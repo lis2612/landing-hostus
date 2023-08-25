@@ -27,14 +27,14 @@
       }
 
       &:before {
-        content: url("/images/oval-left.svg");
+        content: url("../images/oval-left.svg");
         position: absolute;
         left: 0;
         top: 0;
       }
 
       &::after {
-        content: url("/images/oval-right.svg");
+        content: url("../images/oval-right.svg");
         position: absolute;
         right: 0;
         top: 0;
