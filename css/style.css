@@ -270,38 +270,78 @@ legend {
   height: 260px;
   padding-top: 55px;
   padding-left: 30px;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
-.quality__card_active {
-  background: #de3c3c;
-  border: none;
-}
-.quality__card_active .card__title {
-  color: #FFF;
-}
-.quality__card_active .card__description {
-  color: #FFF;
-}
-.quality__card_active:before {
+.quality__card:before {
   content: url("../images/oval-left.svg");
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  -webkit-transition: -webkit-filter 0.4s ease-out;
+  transition: -webkit-filter 0.4s ease-out;
+  transition: filter 0.4s ease-out;
+  transition: filter 0.4s ease-out, -webkit-filter 0.4s ease-out;
   position: absolute;
   left: 0;
   top: 0;
 }
-.quality__card_active::after {
+.quality__card::after {
   content: url("../images/oval-right.svg");
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  -webkit-transition: -webkit-filter 0.4s ease-out;
+  transition: -webkit-filter 0.4s ease-out;
+  transition: filter 0.4s ease-out;
+  transition: filter 0.4s ease-out, -webkit-filter 0.4s ease-out;
   position: absolute;
   right: 0;
   top: 0;
+}
+.quality__card:hover {
+  background: #de3c3c;
+  border: none;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+.quality__card:hover .card__image {
+  position: relative;
+  z-index: 5;
+}
+.quality__card:hover .card__title {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.quality__card:hover .card__description {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.quality__card:hover:before {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+  -webkit-transition: -webkit-filter 0.7s ease-in;
+  transition: -webkit-filter 0.7s ease-in;
+  transition: filter 0.7s ease-in;
+  transition: filter 0.7s ease-in, -webkit-filter 0.7s ease-in;
+}
+.quality__card:hover::after {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+  -webkit-transition: -webkit-filter 0.7s ease-in;
+  transition: -webkit-filter 0.7s ease-in;
+  transition: filter 0.7s ease-in;
+  transition: filter 0.7s ease-in, -webkit-filter 0.7s ease-in;
 }
 .quality__card_offset {
   top: 130px;
 }
 .quality__card .card__image {
-  position: relative;
   width: 60px;
   height: 60px;
-  z-index: 5;
   margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 .quality__card .card__title {
   margin-bottom: 13px;

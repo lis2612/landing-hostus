@@ -13,54 +13,74 @@
     height: 260px;
     padding-top: 55px;
     padding-left: 30px;
+    transition: all 0.7s ease-out;
 
-    &_active {
+    &:before {
+      content: url("../images/oval-left.svg");
+      filter: opacity(0);
+      transition: filter 0.4s ease-out;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: url("../images/oval-right.svg");
+      filter: opacity(0);
+      transition: filter 0.4s ease-out;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover {
       background: #de3c3c;
       border: none;
+      transition: all 0.4s ease-in;
 
-      & .card__title{
-        color: #FFF;
+      & .card__image {
+        position: relative;
+        z-index: 5;
       }
 
-      & .card__description{
-        color: #FFF;
+      & .card__title {
+        color: #fff;
+        transition: all 0.3s ease-in;
+      }
+
+      & .card__description {
+        color: #fff;
+        transition: all 0.3s ease-in;
       }
 
       &:before {
-        content: url("../images/oval-left.svg");
-        position: absolute;
-        left: 0;
-        top: 0;
+        filter: opacity(1);
+        transition: filter 0.7s ease-in;
       }
 
       &::after {
-        content: url("../images/oval-right.svg");
-        position: absolute;
-        right: 0;
-        top: 0;
+        filter: opacity(1);
+        transition: filter 0.7s ease-in;
       }
     }
 
-    &_offset{
+    &_offset {
       top: 130px;
     }
 
-
-
     .card {
       &__image {
-        position: relative;
         width: 60px;
         height: 60px;
-        z-index: 5;
         margin-bottom: 15px;
+        border-radius: 50%;
+        background-color: #fff;
       }
 
-      &__title{
+      &__title {
         margin-bottom: 13px;
         font-size: 18px;
       }
-
     }
   }
 }
