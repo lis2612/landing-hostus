@@ -187,7 +187,7 @@ shakeElements(slides);
 
 let repeatSlidesTimer=setInterval(() => {
   nextSlide(slides)
-}, 2000);
+}, 5000);
 
 
 for (el of slides) {

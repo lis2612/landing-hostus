@@ -3,7 +3,7 @@ $slider-width: 100%;
 $slider-height: 691px;
 $slide-size: 100px;
 $scale: 3;
-$active-slide-size: 400px;
+$active-slide-size: 300px;
 
 .slider {
   position: relative;
@@ -11,6 +11,11 @@ $active-slide-size: 400px;
   width: $slider-width;
   height: $slider-height;
   overflow: hidden;
+
+&__title{
+  text-align: center;
+  z-index: 5;
+}
 
   &__button {
     cursor: pointer;
@@ -40,7 +45,6 @@ $active-slide-size: 400px;
     width: $slide-size;
     height: $slide-size;
     border-radius: 50%;
-    border: 2px solid silver;
 
     // font-size: 50px;
     font-weight: 700;
@@ -51,6 +55,7 @@ $active-slide-size: 400px;
     &_active {
       left: calc($slider-width / 2 - $active-slide-size / 2);
       // top: calc($slider-height / 2 - $active-slide-size / 2);
+      top: 50px;
       height: $active-slide-size;
       width: $active-slide-size;
       transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-in, height 1s ease-in;
@@ -61,7 +66,7 @@ $active-slide-size: 400px;
         scale: 1;
         position: absolute;
         margin: 0 auto;
-        top: $slider-height/3 * 2;
+        top: $active-slide-size+50px;;
         width: 940px;
         height: 220px;
         transition: scale 0.5s ease-in, top 0.8s ease-in;
