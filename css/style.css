@@ -352,17 +352,15 @@ legend {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
   width: 100vw;
   height: 342px;
+  margin-bottom: 200px;
   background: url("../images/bg.png");
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  left: 0;
   padding-top: 98px;
-  margin-bottom: 200px;
 }
 .track__title {
   color: #fff;
@@ -377,5 +375,11 @@ legend {
   text-align: center;
 }
 .track__button {
+  margin: 0 auto;
+}
+
+.slider {
+  width: 2024px;
+  height: 691px;
   margin: 0 auto;
 }
