@@ -1,6 +1,110 @@
-.slider{
-  width: 2024px;
-  height: 691px;
-  margin: 0 auto;
+// $slider-width: 1920px;
+$slider-width: 100%;
+$slider-height: 691px;
+$slide-size: 100px;
+$scale: 3;
+$active-slide-size: 400px;
 
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: $slider-width;
+  height: $slider-height;
+  overflow: hidden;
+
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    border: 2px solid green;
+    bottom: 0;
+    font-size: 25px;
+    text-align: center;
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
+  }
+
+  .slide {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $slide-size;
+    height: $slide-size;
+    border-radius: 50%;
+    border: 2px solid silver;
+
+    // font-size: 50px;
+    font-weight: 700;
+
+    scale: 1;
+    transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-out, height 1s ease-out;
+
+    &_active {
+      left: calc($slider-width / 2 - $active-slide-size / 2);
+      // top: calc($slider-height / 2 - $active-slide-size / 2);
+      height: $active-slide-size;
+      width: $active-slide-size;
+      transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-in, height 1s ease-in;
+      z-index: 5;
+      border: 2px solid silver;
+
+      & > .slide__text-container {
+        scale: 1;
+        position: absolute;
+        margin: 0 auto;
+        top: $slider-height/3 * 2;
+        width: 940px;
+        height: 220px;
+        transition: scale 0.5s ease-in, top 0.8s ease-in;
+      }
+    }
+
+    &__image {
+      margin: 0 auto;
+      // width: 100%;
+      height: 100%;
+      clip-path: circle();
+      z-index: -20;
+      transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-out, height 1s ease-out;
+
+    }
+
+    &__text-container {
+      position: absolute;
+      scale: 0;
+      top: 0;
+      transition: scale 0.5s ease-out, top 0.8s ease-out;
+    }
+
+    &__description {
+      width: 100%;
+      margin-bottom: 50px;
+      color: #212121;
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-align: center;
+    }
+
+    &__client {
+      color: #c5c5c5;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 171.429% */
+      text-align: center;
+    }
+  }
 }
