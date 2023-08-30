@@ -2,19 +2,23 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 130px;
+  justify-content: space-around;
+  gap: 120px;
   margin-bottom: 308px;
-
   padding: 0 60px;
 
   &__card {
     position: relative;
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
     height: 260px;
     padding-top: 55px;
     padding-left: 30px;
     transition: all 0.7s ease-out;
+
+    &:nth-child(even) {
+      top: 130px;
+    }
 
     &:before {
       content: url("../images/oval-left.svg");
@@ -65,10 +69,6 @@
       }
     }
 
-    &_offset {
-      top: 130px;
-    }
-
     .card {
       &__image {
         width: 60px;
@@ -83,5 +83,24 @@
         font-size: 18px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .quality {
+    padding: 0 15px;
+    gap: 30px;
+
+    .card {
+      &:nth-child(even) {
+        top: initial;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .quality {
+    margin-bottom: 100px;
   }
 }

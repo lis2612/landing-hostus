@@ -66,3 +66,10 @@
   border-radius: 6px;
   border: 2px solid rgba(197, 197, 197, 0.15);
 }
+
+@media screen and (max-width: 1200px) {
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

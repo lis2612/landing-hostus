@@ -1,6 +1,6 @@
 .feedback {
   margin-bottom: 244px;
-  width: 840px;
+  max-width: 840px;
   height: 260px;
   display: flex;
   align-items: center;
@@ -38,4 +38,12 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 900px) {
+.feedback{
+  max-width: 90vw;
+  margin-bottom: 30px;
+  padding-top: 15px;
+}
 }

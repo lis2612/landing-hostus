@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 114px;
-  width: 1047px;
+  max-width: 1047px;
   margin: 146px auto 146px;
   // padding-right: 41px;
   // padding: 146px 113px 0 73px;
@@ -19,5 +19,34 @@
 
   &__description {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .create {
+    justify-content: center;
+    gap: 30px;
+
+    &__card {
+      width: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .create {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    &__card {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
