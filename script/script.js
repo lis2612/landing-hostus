@@ -73,7 +73,6 @@ function shakeElements(elCollection) {
 
       let top = Math.random() * slider.offsetHeight;
       if (top >= slider.offsetHeight - sizesArr[i]) top = slider.offsetHeight - sizesArr[i];
-      console.log(slider.offsetHeight, top);
 
       if (
         left <= activeRect.right &&
