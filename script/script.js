@@ -22,18 +22,6 @@ const slider = document.querySelector(".slider");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
-// Get slider dimensions
-const sliderRect = {
-  left: 0,
-  right: slider.offsetWidth,
-  top: 0,
-  bottom: slider.offsetHeight,
-  width: slider.offsetWidth,
-  height: slider.offsetHeight,
-  centerX: slider.offsetWidth / 2,
-  centerY: slider.offsetHeight / 2,
-};
-
 // Get active slide element
 const activeSlide = document.getElementsByClassName("slide_active")[0];
 
@@ -75,20 +63,20 @@ function shakeElements(elCollection) {
   for (el of elCollection) {
     // If element is not active calculate position
     if (!el.classList.contains("slide_active")) {
-      let left = Math.random() * sliderRect.width;
+      let left = Math.random() * slider.offsetWidth;
       if (i < elCollection.length / 2) {
-        left = left - sliderRect.width / 2;
+        left = left - slider.offsetWidth / 2;
       } else {
-        left = left + sliderRect.width / 2;
+        left = left + slider.offsetWidth / 2;
 
       }
 
-      if (left >= sliderRect.right - sizesArr[i]) left = sliderRect.right - sizesArr[i];
-      if (left <= sliderRect.left + sizesArr[i]) left = sliderRect.left + sizesArr[i];
+      if (left >= slider.offsetWidth - sizesArr[i]) left = slider.offsetWidth - sizesArr[i];
+      if (left <= sizesArr[i]) left = sizesArr[i];
 
 
-      let top = Math.random() * sliderRect.height;
-      if (top >= sliderRect.bottom - sizesArr[i]) top = sliderRect.height - sizesArr[i];
+      let top = Math.random() * slider.offsetHeight;
+      if (top >= slider.offsetHeight - sizesArr[i]) top = slider.offsetHeight - sizesArr[i];
 
       if (
         left <= activeRect.right &&
@@ -197,7 +185,7 @@ for (el of slides) {
     setTimeout(() => {
       repeatSlidesTimer = setInterval(() => {
         nextSlide(slides);
-      }, 2000);
+      }, 5000);
     }, 5000);
   });
 }
@@ -206,3 +194,4 @@ for (el of slides) {
 
 //TODO: fix overhidden elements
 // TODO: clear code
+// TODO: fix width slider on resize window
