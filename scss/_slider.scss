@@ -4,13 +4,15 @@ $slider-height: 691px;
 $slide-size: 100px;
 $scale: 3;
 $active-slide-size: 300px;
-
+main{
+  overflow: hidden;
+}
 .slider {
   position: relative;
   margin: 0 auto;
   width: $slider-width;
   height: $slider-height;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__title {
     position: relative;

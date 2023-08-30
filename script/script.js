@@ -10,10 +10,8 @@ for (let i = 0; i < cards.length; i++) {
     toggleActiveCard(cards[i]);
     setTimeout(() => toggleActiveCard(cards[i]), 2000);
     timerId = setTimeout(tick, 2000 * cards.length);
-  }, i*2000 );
+  }, i * 2000);
 }
-
-
 
 // ---------------- SLIDER ---------------------
 // Get elements from page
@@ -68,15 +66,14 @@ function shakeElements(elCollection) {
         left = left - slider.offsetWidth / 2;
       } else {
         left = left + slider.offsetWidth / 2;
-
       }
 
       if (left >= slider.offsetWidth - sizesArr[i]) left = slider.offsetWidth - sizesArr[i];
       if (left <= sizesArr[i]) left = sizesArr[i];
 
-
       let top = Math.random() * slider.offsetHeight;
       if (top >= slider.offsetHeight - sizesArr[i]) top = slider.offsetHeight - sizesArr[i];
+      console.log(slider.offsetHeight, top);
 
       if (
         left <= activeRect.right &&
@@ -85,7 +82,7 @@ function shakeElements(elCollection) {
         top + sizesArr[i] >= activeRect.top
       ) {
         if (i < elCollection.length / 2) {
-          left = activeRect.left -sizesArr[i];
+          left = activeRect.left - sizesArr[i];
         } else {
           left = activeRect.right;
         }
@@ -118,22 +115,22 @@ function shakeElements(elCollection) {
 function scale(elCollection) {
   let activeSlideIndx = findActiveSlideIndex(elCollection);
   // Multiplier for each next element's size. The size is calculated relative to the size of the active element
-  let scale=0.5;
+  let scale = 0.7;
   let elSizes = [];
   for (let i = 0; i < elCollection.length; i++) {
     elSizes[i] = 1;
   }
   for (let i = 1; i < elCollection.length; i++) {
     if (activeSlideIndx + i < elCollection.length) {
-      elCollection[activeSlideIndx + i].style.height = `${activeRect.height * (scale)}px`;
-      elCollection[activeSlideIndx + i].style.width = `${activeRect.width * (scale)}px`;
-      elSizes[activeSlideIndx + i] = activeRect.height * (scale - i / 10);
+      elCollection[activeSlideIndx + i].style.height = `${activeRect.height * (scale-i*.1)}px`;
+      elCollection[activeSlideIndx + i].style.width = `${activeRect.width * (scale-i*.1)}px`;
+      elSizes[activeSlideIndx + i] = activeRect.height * (scale-i*.1);
     }
 
     if (activeSlideIndx - i >= 0) {
-      elCollection[activeSlideIndx - i].style.height = `${activeRect.height * (scale)}px`;
-      elCollection[activeSlideIndx - i].style.width = `${activeRect.width * (scale)}px`;
-      elSizes[activeSlideIndx - i] = activeRect.height * (scale - i / 10);
+      elCollection[activeSlideIndx - i].style.height = `${activeRect.height * (scale-i*.1)}px`;
+      elCollection[activeSlideIndx - i].style.width = `${activeRect.width * (scale-i*.1)}px`;
+      elSizes[activeSlideIndx - i] = activeRect.height * (scale-i*.1);
     }
   }
   return elSizes;
@@ -173,15 +170,14 @@ shakeElements(slides);
 // nextButton.addEventListener("click", () => nextSlide(slides));
 // prevButton.addEventListener("click", () => prevSlide(slides));
 
-let repeatSlidesTimer=setInterval(() => {
-  nextSlide(slides)
+let repeatSlidesTimer = setInterval(() => {
+  nextSlide(slides);
 }, 5000);
-
 
 for (el of slides) {
   el.addEventListener("click", (e) => {
-    clickSlide(e.currentTarget, slides)
-    clearInterval(repeatSlidesTimer)
+    clickSlide(e.currentTarget, slides);
+    clearInterval(repeatSlidesTimer);
     setTimeout(() => {
       repeatSlidesTimer = setInterval(() => {
         nextSlide(slides);
@@ -189,8 +185,6 @@ for (el of slides) {
     }, 5000);
   });
 }
-
-
 
 //TODO: fix overhidden elements
 // TODO: clear code
