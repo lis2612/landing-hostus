@@ -1,0 +1,100 @@
+.price {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 200px;
+
+  &__title {
+    margin-bottom: 17px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+  }
+
+  &__cards {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .card {
+      position: relative;
+      width: 270px;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 35px 0;
+      transition: height 0.5s ease, color 0.5s ease, border  0.5s ease;
+
+      &__title {
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
+
+      &__description {
+        height: 72px;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px; /* 171.429% */
+        transition: margin  0.5s ease;
+      }
+
+      &__price-text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px; /* 171.429% */
+      }
+
+      &__price {
+        color: #ffaa64;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+
+      &__link {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 20px 0;
+        border-top: 1px solid rgba(197, 197, 197, 0.3);
+        color: #212121;
+        font-weight: 500;
+
+        text-align: center;
+
+        &:after {
+          position: relative;
+          content: url("../images/arrow-right-black.svg");
+          top: 2px;
+          left: 7px;
+        }
+      }
+
+      &:hover {
+        border-top: 6px solid #de3c3c;
+        height: 400px;
+        transition: height 0.5s ease, color 0.5s ease, border  0.5s ease;
+
+        & > .card__price,
+        .card__link {
+          color: #de3c3c;
+          transition: color 0.5s ease,;
+        }
+
+        & > .card__description{
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}
